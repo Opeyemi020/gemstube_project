@@ -1,5 +1,9 @@
 package io.sulty.gemstube.service.cloud;
 
-public class CloudService {
+import org.springframework.web.multipart.MultipartFile;
 
+public interface CloudService {
+
+
+    String upload(MultipartFile file);
 }
