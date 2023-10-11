@@ -7,9 +7,8 @@ import org.springframework.context.annotation.Configuration;
 @Getter
 @Configuration
 public class MailConfig {
-    @Value("${brevo.mail.url}")
-    private String mailApiKey;
-
     @Value("${mail.api.key}")
+    private String mailApiKey;
+    @Value("${brevo.mail.url}")
     private String brevoMailUrl;
 }
