@@ -19,7 +19,7 @@ public class CloudinaryCloudService implements CloudService {
     @Override
     public String upload(MultipartFile file) throws MediaUploadException {
         try {
-            Map<?, ?> uploadResponse = cloudinary.uploader().upload(file.getBytes(), ObjectUtils.emptyMap());
+            Map<?, ?> uploadResponse = cloudinary.uploader().upload(file.getBytes(), ObjectUtils.asMap("resource_type", "auto"));
             log.info("upload response-->{}", uploadResponse);
             String image_Url = (String) uploadResponse.get("secure_url");
             return image_Url;

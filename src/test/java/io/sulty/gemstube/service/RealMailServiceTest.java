@@ -2,7 +2,6 @@ package io.sulty.gemstube.service;
 
 import io.sulty.gemstube.dtos.request.EmailRequest;
 import io.sulty.gemstube.dtos.request.Recipient;
-import io.sulty.gemstube.dtos.request.Sender;
 import io.sulty.gemstube.dtos.response.EmailResponse;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +26,6 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
             );
 
             EmailRequest emailRequest = new  EmailRequest();
-//            emailRequest.setSender(sender);
             emailRequest.setRecipients(recipients);
             emailRequest.setHtmlContent("<p>we are testing our app</p>");
             emailRequest.setSubject("welcome to our SultyTube streaming application....");
